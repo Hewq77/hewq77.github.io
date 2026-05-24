@@ -1,0 +1,322 @@
+[
+  {
+    "title": "Adaptive Expert Learning for Hyperspectral and Multispectral Image Fusion",
+    "authors": "<strong>Wangquan He</strong>, Yixun Cai, Qi Ren, Abuduwaili Ruze, Sen Jia",
+    "type": "accepted",
+    "isFirstAuthor": true,
+    "showOnHomepage": true,
+    "featuredOrder": 1,
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "venueYear": "2025",
+    "venueNote": "(SCI Q1 TOP, IF=8.6)",
+    "year": "2025",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11202498"
+      },
+      {
+        "text": "Code",
+        "link": "https://github.com/Hewq77/AELF"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/AELF.png"
+  },
+  {
+    "title": "LGCT: Local-Global Collaborative Transformer for Fusion of Hyperspectral and Multispectral Images",
+    "authors": "<strong>Wangquan He</strong>, Xiyou Fu, Nanying Li, Qi Ren, Sen Jia",
+    "type": "accepted",
+    "isFirstAuthor": true,
+    "showOnHomepage": true,
+    "featuredOrder": 2,
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "venueYear": "2024",
+    "venueNote": "(SCI Q1 TOP, IF=8.6)",
+    "year": "2024",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10742406"
+      },
+      {
+        "text": "Code",
+        "link": "https://github.com/Hewq77/LGCT"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/LGCT.png"
+  },
+  {
+    "title": "A New Context-Aware Framework for Defending Against Adversarial Attacks in Hyperspectral Image Classification",
+    "authors": "Bing Tu, <strong>Wangquan He</strong>, Qianming Li, Yishu Peng, Antonio Plaza",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 3,
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "venueYear": "2023",
+    "venueNote": "(SCI Q1 TOP, IF=8.6)",
+    "year": "2023",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10056357"
+      },
+      {
+        "text": "Code",
+        "link": "https://github.com/Hewq77/RCCA"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/RCCA.png"
+  },
+  {
+    "title": "DeSAM2: Detection-Driven SAM2 for Hyperspectral Object Tracking",
+    "authors": "<strong>Wangquan He</strong>, Qi Ren, Hongtao Zhang, Ziqian Mo, Nanying Li, Meng Xu, Sen Jia",
+    "type": "accepted",
+    "isFirstAuthor": true,
+    "showOnHomepage": true,
+    "featuredOrder": 4,
+    "venue": "WHISPERS 2024",
+    "venueYear": "2024",
+    "year": "2024",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10876417/"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/DeSAM2.png"
+  },
+  {
+    "title": "Fully Convolutional Network-Based Nonlocal-Dependent Learning for Hyperspectral Image Classification",
+    "authors": "Bing Tu, <strong>Wangquan He</strong>, Qianming Li, Yishu Peng, Siyuan Chen",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 5,
+    "venue": "IEEE Transactions on Instrumentation and Measurement",
+    "venueYear": "2022",
+    "venueNote": "(SCI Q2 TOP, IF=5.9)",
+    "year": "2022",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9916197"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/NDLNet.png"
+  },
+  {
+    "title": "Hyperspectral Classification via Global-Local Hierarchical Weighting Fusion Network",
+    "authors": "Bing Tu, <strong>Wangquan He</strong>, Wei He, Xianfeng Ou, Antonio Plaza",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 6,
+    "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    "venueYear": "2021",
+    "venueNote": "(SCI Q2 TOP, IF=5.3)",
+    "year": "2021",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9645230"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/GLH-WFN.png"
+  },
+  {
+    "title": "DAHNet: A Decomposition and Aggregation Hybrid Network for Hyperspectral Object Detection",
+    "authors": "Meng Xu, Hongtao Zhang, <strong>Wangquan He</strong>, Shuyu Zhang, Sen Jia",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 7,
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "venueYear": "2026",
+    "venueNote": "(SCI Q1 TOP, IF=8.6)",
+    "year": "2026",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11396057/"
+      },
+      {
+        "text": "Code",
+        "link": "http://szu-hsilab.com/"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/DAHNet.png"
+  },
+  {
+    "title": "Region-Aware MoE Network for Hyperspectral and Multispectral Image Fusion",
+    "authors": "Nan Xiao, Xiyou Fu, Qi Ren, <strong>Wangquan He</strong>, Siqi Wei, Sen Jia",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 10,
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "venueYear": "2026",
+    "venueNote": "(SCI Q1 TOP, IF=8.6)",
+    "year": "2026",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11471838"
+      },
+      {
+        "text": "Code",
+        "link": "https://github.com/XXn25/RAMoE"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/RAMoE.png"
+  },
+  {
+    "title": "DiLAST: Leveraging Differential RGB Features for Hyperspectral Image Super-Resolution",
+    "authors": "Qi Ren, Meng Xu, Nanying Li, <strong>Wangquan He</strong>, Sen Jia",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 11,
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "venueYear": "2025",
+    "venueNote": "(SCI Q1 TOP, IF=8.6)",
+    "year": "2025",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11153709"
+      },
+      {
+        "text": "Code",
+        "link": "https://github.com/renqi1998/DiLAST"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/DiLAST.png"
+  },
+  {
+    "title": "Fuzzy Boundary-Aware Network for Hyperspectral Individual Tree Fine Recognition",
+    "authors": "Nanying Li, Shuguo Jiang, Yuxin Zhou, <strong>Wangquan He</strong>, Sen Jia",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 12,
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "venueYear": "2025",
+    "venueNote": "(SCI Q1 TOP, IF=8.6)",
+    "year": "2025",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/11053219"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/FBAN.png"
+  },
+  {
+    "title": "Hyperspectral Image Classification Using a Superpixel-Pixel-Subpixel Multilevel Network",
+    "authors": "Bing Tu, Qi Ren, Qianming Li, <strong>Wangquan He</strong>, Wei He",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 13,
+    "venue": "IEEE Transactions on Instrumentation and Measurement",
+    "venueYear": "2023",
+    "venueNote": "(SCI Q2 TOP, IF=5.9)",
+    "year": "2023",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/10115248"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/SPSM.png"
+  },
+  {
+    "title": "Spatial-Spectral Gabor-based Hyperspectral Image Classification",
+    "authors": "Sen Jia, Shuyu Zhang, Qi Ren, <strong>Wangquan He</strong>, Meng Xu, Jiasong Zhu",
+    "type": "book",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 14,
+    "venue": "Machine-Learning-Based Hyperspectral Image Processing",
+    "venueYear": "2026",
+    "year": "2026",
+    "highlight": "Book",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781394267880.ch14"
+      }
+    ]
+  },
+  {
+    "title": "Multiscale Adaptive Convolution for Hyperspectral Image Classification",
+    "authors": "Qi Ren, Bing Tu, Qianming Li, <strong>Wangquan He</strong>, Yishu Peng",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 15,
+    "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    "venueYear": "2022",
+    "venueNote": "(SCI Q2 TOP, IF=5.3)",
+    "year": "2022",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/abstract/document/9802660"
+      }
+    ]
+  },
+  {
+    "title": "Robust Learning of Mislabeled Training Samples for Remote Sensing Image Scene Classification",
+    "authors": "Bing Tu, Wenlan Kuang, <strong>Wangquan He</strong>, Guoyun Zhang, Yishu Peng",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 16,
+    "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    "venueYear": "2020",
+    "venueNote": "(SCI Q2 TOP, IF=5.3)",
+    "year": "2020",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/document/9200690/"
+      }
+    ]
+  },
+  {
+    "title": "A Spectral-Spatial Attention Aggregation Network for Hyperspectral Imagery Classification",
+    "authors": "Wenlan Kuang, Bing Tu, <strong>Wangquan He</strong>, Guoyun Zhang, Yishu Peng",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 17,
+    "venue": "International Journal of Remote Sensing",
+    "venueYear": "2021",
+    "year": "2021",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://www.tandfonline.com/doi/full/10.1080/01431161.2021.1954715"
+      }
+    ]
+  },
+  {
+    "title": "MCARNet: Mixed Convolution-Attention-Residual Network for Hyperspectral Image Classification of Cholangiocarcinoma",
+    "authors": "Jiaqi Xue, <strong>Wangquan He</strong>, Songxin Ye, Hong Liang, Sen Jia",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 18,
+    "venue": "ICCPR 2023",
+    "venueYear": "2023",
+    "year": "2023",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://dl.acm.org/doi/abs/10.1145/3633637.3633688"
+      }
+    ]
+  }
+]
