@@ -44,64 +44,208 @@ function initThemeToggle() {
 
 // ==================== Google Scholar Citations ====================
 function loadScholarStats() {
-    const scholarId = 'tMZ30p8AAAAJ';
-    const citationsEl = document.querySelector('#scholar-badge-citations .scholar-badge-value');
+    const badgeEl = document.getElementById('scholar-badge-citations');
+    const citationsEl = badgeEl ? badgeEl.querySelector('.scholar-badge-value') : null;
 
-    if (!citationsEl) return;
+    if (!badgeEl || !citationsEl) return;
 
-    citationsEl.classList.add('loading');
+    const scholarId = badgeEl.dataset.scholarId || 'tMZ30p8AAAAJ';
+    const fallbackCitations = parseCitationNumber(badgeEl.dataset.fallbackCitations || citationsEl.textContent);
+    const fallbackUpdated = badgeEl.dataset.fallbackUpdated || '';
+    let hasDisplayedValue = renderScholarCitations(citationsEl, fallbackCitations, {
+        updated: fallbackUpdated,
+        source: 'Cached Google Scholar'
+    });
 
-    // Try Google Scholar via CORS proxies, then fallback to Semantic Scholar API
+    const storedStats = getStoredScholarStats(scholarId);
+    if (storedStats) {
+        hasDisplayedValue = renderScholarCitations(citationsEl, storedStats, {
+            updated: storedStats.updated,
+            source: storedStats.source || 'Cached Google Scholar'
+        }) || hasDisplayedValue;
+    }
+
+    if (!hasDisplayedValue) {
+        citationsEl.classList.add('loading');
+    }
+    badgeEl.setAttribute('aria-busy', 'true');
+
+    fetchLocalScholarStats()
+        .then(stats => {
+            if (stats && stats.scholarId === scholarId) {
+                hasDisplayedValue = renderScholarCitations(citationsEl, stats, {
+                    updated: stats.updated,
+                    source: stats.source || 'Cached Google Scholar'
+                }) || hasDisplayedValue;
+                storeScholarStats(scholarId, stats);
+            }
+        })
+        .catch(error => {
+            console.warn('Scholar cache load failed:', error);
+        })
+        .finally(() => {
+            fetchLiveGoogleScholarCitations(scholarId)
+                .then(citations => {
+                    const stats = {
+                        scholarId,
+                        citations,
+                        updated: new Date().toISOString(),
+                        source: 'Google Scholar'
+                    };
+
+                    hasDisplayedValue = renderScholarCitations(citationsEl, stats, {
+                        animate: true,
+                        updated: stats.updated,
+                        source: stats.source
+                    }) || hasDisplayedValue;
+                    storeScholarStats(scholarId, stats);
+                })
+                .catch(error => {
+                    console.warn('Scholar live refresh failed:', error);
+                })
+                .finally(() => {
+                    badgeEl.removeAttribute('aria-busy');
+                    citationsEl.classList.remove('loading');
+                    if (!hasDisplayedValue && !hasRenderedScholarValue(citationsEl)) {
+                        showScholarError(citationsEl);
+                    }
+                });
+        });
+}
+
+function fetchLocalScholarStats() {
+    return fetch(getDataPath('scholar-stats.json'), { cache: 'no-store' })
+        .then(handleJsonResponse)
+        .then(normalizeScholarStats);
+}
+
+function fetchLiveGoogleScholarCitations(scholarId) {
     const scholarUrl = 'https://scholar.google.com/citations?user=' + scholarId + '&hl=en';
     const proxies = [
         'https://api.allorigins.win/raw?url=' + encodeURIComponent(scholarUrl),
         'https://corsproxy.io/?' + encodeURIComponent(scholarUrl),
-        'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(scholarUrl),
+        'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(scholarUrl)
     ];
 
-    fetchWithFallback(proxies)
+    return fetchWithFallback(proxies)
         .then(html => {
             const citations = parseScholarCitations(html);
-            if (citations !== null) {
-                animateCount(citationsEl, citations);
-            } else {
-                // Fallback: Semantic Scholar API (has CORS support)
-                return fetchSemanticScholar(citationsEl, scholarId);
+            if (citations === null) {
+                throw new Error('Could not parse Google Scholar citations');
             }
-        })
-        .catch(() => {
-            // Fallback: Semantic Scholar API
-            return fetchSemanticScholar(citationsEl, scholarId);
-        });
-}
-
-function fetchSemanticScholar(citationsEl, googleScholarId) {
-    // Semantic Scholar can look up by Google Scholar user ID
-    const url = 'https://api.semanticscholar.org/graph/v1/author/GOOGLE:' + googleScholarId + '?fields=citationCount';
-    return fetch(url)
-        .then(r => {
-            if (!r.ok) throw new Error('Semantic Scholar API ' + r.status);
-            return r.json();
-        })
-        .then(data => {
-            if (data && typeof data.citationCount === 'number') {
-                animateCount(citationsEl, data.citationCount);
-            } else {
-                showScholarError(citationsEl);
-            }
-        })
-        .catch(() => {
-            showScholarError(citationsEl);
+            return citations;
         });
 }
 
 function fetchWithFallback(urls) {
     return urls.reduce((promise, url) => {
-        return promise.catch(() => fetch(url, { signal: AbortSignal.timeout(8000) }).then(r => {
+        return promise.catch(() => fetchTextWithTimeout(url, 8000));
+    }, Promise.reject());
+}
+
+function fetchTextWithTimeout(url, timeoutMs) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), timeoutMs);
+
+    return fetch(url, { signal: controller.signal })
+        .then(r => {
             if (!r.ok) throw new Error('HTTP ' + r.status);
             return r.text();
-        }));
-    }, Promise.reject());
+        })
+        .finally(() => {
+            clearTimeout(timeout);
+        });
+}
+
+function normalizeScholarStats(data) {
+    if (!data) return null;
+
+    const citations = parseCitationNumber(data.citations ?? data.citationCount ?? data.totalCitations);
+    if (citations === null) return null;
+
+    return {
+        scholarId: data.scholarId || 'tMZ30p8AAAAJ',
+        citations,
+        updated: data.updated || data.lastUpdated || '',
+        source: data.source || 'Cached Google Scholar'
+    };
+}
+
+function parseCitationNumber(value) {
+    const match = String(value ?? '').replace(/,/g, '').match(/\d+/);
+    if (!match) return null;
+
+    const parsed = parseInt(match[0], 10);
+    return Number.isFinite(parsed) ? parsed : null;
+}
+
+function renderScholarCitations(el, statsOrNumber, options = {}) {
+    if (!el) return false;
+
+    const stats = typeof statsOrNumber === 'object'
+        ? normalizeScholarStats(statsOrNumber)
+        : normalizeScholarStats({ citations: statsOrNumber });
+
+    if (!stats) return false;
+
+    el.classList.remove('loading');
+    if (options.animate) {
+        animateCount(el, stats.citations);
+    } else {
+        el.textContent = stats.citations.toLocaleString();
+    }
+
+    updateScholarTitle(el, {
+        updated: options.updated || stats.updated,
+        source: options.source || stats.source
+    });
+
+    return true;
+}
+
+function updateScholarTitle(el, stats = {}) {
+    const link = el.closest('.scholar-badge-link');
+    if (!link) return;
+
+    const parts = [stats.source || 'Google Scholar citations'];
+    if (stats.updated) {
+        parts.push('updated ' + formatScholarDate(stats.updated));
+    }
+    link.title = parts.join(', ');
+}
+
+function formatScholarDate(value) {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) {
+        return value;
+    }
+    return date.getFullYear() + '-' +
+        String(date.getMonth() + 1).padStart(2, '0') + '-' +
+        String(date.getDate()).padStart(2, '0');
+}
+
+function hasRenderedScholarValue(el) {
+    return parseCitationNumber(el ? el.textContent : '') !== null;
+}
+
+function getStoredScholarStats(scholarId) {
+    try {
+        return normalizeScholarStats(JSON.parse(localStorage.getItem(getScholarStorageKey(scholarId))));
+    } catch (e) {
+        return null;
+    }
+}
+
+function storeScholarStats(scholarId, stats) {
+    try {
+        localStorage.setItem(getScholarStorageKey(scholarId), JSON.stringify(stats));
+    } catch (e) {
+        // Local storage may be unavailable in private browsing or strict environments.
+    }
+}
+
+function getScholarStorageKey(scholarId) {
+    return 'scholarStats:' + scholarId;
 }
 
 function parseScholarCitations(html) {
