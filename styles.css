@@ -168,6 +168,10 @@ body.dark-mode footer {
     border-top-color: #1e293b;
 }
 
+body.dark-mode .site-footer {
+    color: #64748b;
+}
+
 body.dark-mode .text-neutral-400 {
     color: #64748b;
 }
@@ -443,8 +447,35 @@ details summary {
     margin-left: 0.5rem;
 }
 
+.publication-author-legend {
+    margin-top: 0.35rem;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: #94a3b8;
+    font-style: italic;
+}
+
 .content-block {
     margin-top: 1.5rem;
+}
+
+.site-footer {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid #e5e7eb;
+    background: #f8fafc;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.footer-separator {
+    margin: 0 0.5rem;
+    color: #cbd5e1;
 }
 
 .view-all-container {
@@ -581,6 +612,12 @@ details summary {
     font-weight: 600;
 }
 
+.pub-line-2 sup {
+    font-size: 0.72em;
+    margin-left: 0.08rem;
+    color: #64748b;
+}
+
 .pub-line-3 {
     font-size: 0.91rem;
     color: #64748b;
@@ -683,6 +720,7 @@ details summary {
 .pub-thumbnail-box {
     width: 300px;
     aspect-ratio: 16 / 9;
+    box-sizing: border-box;
     flex-shrink: 0;
     order: -1;
     position: relative;
@@ -698,7 +736,8 @@ details summary {
     height: 100%;
     display: block;
     border-radius: 10px;
-    object-fit: fill;
+    object-fit: contain;
+    object-position: center;
     background: #ffffff;
 }
 
@@ -769,6 +808,13 @@ details summary {
         padding-top: 5rem;
     }
 
+    .section-title {
+        display: block;
+        font-size: 2.2rem;
+        line-height: 1.15;
+        overflow-wrap: break-word;
+    }
+
     .news-item,
     .honor-item {
         grid-template-columns: 1fr;
@@ -782,6 +828,8 @@ details summary {
     .pub-list-item,
     .pub-list-item.with-thumbnail-expanded {
         flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .pub-thumbnail-box {
@@ -789,9 +837,23 @@ details summary {
         max-width: none;
     }
 
+    .pub-content-wrapper,
+    .pub-title-text {
+        min-width: 0;
+    }
+
+    .pub-title-text {
+        overflow-wrap: anywhere;
+    }
+
     .publication-filters {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .filter-link {
+        box-sizing: border-box;
+        max-width: 100%;
     }
 }
 

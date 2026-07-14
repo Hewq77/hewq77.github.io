@@ -1,7 +1,7 @@
 [
   {
     "title": "Adaptive Expert Learning for Hyperspectral and Multispectral Image Fusion",
-    "authors": "<strong>Wangquan He</strong>, Yixun Cai, Qi Ren, Abuduwaili Ruze, Sen Jia",
+    "authors": "<strong>Wangquan He</strong>, Yixun Cai, Qi Ren, Abuduwaili Ruze, Sen Jia<sup>&dagger;</sup>",
     "type": "accepted",
     "isFirstAuthor": true,
     "showOnHomepage": true,
@@ -24,7 +24,7 @@
   },
   {
     "title": "LGCT: Local-Global Collaborative Transformer for Fusion of Hyperspectral and Multispectral Images",
-    "authors": "<strong>Wangquan He</strong>, Xiyou Fu, Nanying Li, Qi Ren, Sen Jia",
+    "authors": "<strong>Wangquan He</strong>, Xiyou Fu, Nanying Li, Qi Ren, Sen Jia<sup>&dagger;</sup>",
     "type": "accepted",
     "isFirstAuthor": true,
     "showOnHomepage": true,
@@ -47,7 +47,7 @@
   },
   {
     "title": "A New Context-Aware Framework for Defending Against Adversarial Attacks in Hyperspectral Image Classification",
-    "authors": "Bing Tu, <strong>Wangquan He</strong>, Qianming Li, Yishu Peng, Antonio Plaza",
+    "authors": "Bing Tu, <strong>Wangquan He</strong>, Qianming Li, Yishu Peng<sup>&dagger;</sup>, Antonio Plaza",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -70,7 +70,7 @@
   },
   {
     "title": "DeSAM2: Detection-Driven SAM2 for Hyperspectral Object Tracking",
-    "authors": "<strong>Wangquan He</strong>, Qi Ren, Hongtao Zhang, Ziqian Mo, Nanying Li, Meng Xu, Sen Jia",
+    "authors": "<strong>Wangquan He</strong>, Qi Ren, Hongtao Zhang, Ziqian Mo, Nanying Li, Meng Xu, Sen Jia<sup>&dagger;</sup>",
     "type": "accepted",
     "isFirstAuthor": true,
     "showOnHomepage": true,
@@ -89,7 +89,7 @@
   },
   {
     "title": "Fully Convolutional Network-Based Nonlocal-Dependent Learning for Hyperspectral Image Classification",
-    "authors": "Bing Tu, <strong>Wangquan He</strong>, Qianming Li, Yishu Peng, Siyuan Chen",
+    "authors": "Bing Tu, <strong>Wangquan He</strong>, Qianming Li<sup>&dagger;</sup>, Yishu Peng, Siyuan Chen",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -108,7 +108,7 @@
   },
   {
     "title": "Hyperspectral Classification via Global-Local Hierarchical Weighting Fusion Network",
-    "authors": "Bing Tu, <strong>Wangquan He</strong>, Wei He, Xianfeng Ou, Antonio Plaza",
+    "authors": "Bing Tu, <strong>Wangquan He</strong>, Wei He<sup>&dagger;</sup>, Xianfeng Ou, Antonio Plaza",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -127,7 +127,7 @@
   },
   {
     "title": "DAHNet: A Decomposition and Aggregation Hybrid Network for Hyperspectral Object Detection",
-    "authors": "Meng Xu, Hongtao Zhang, <strong>Wangquan He</strong>, Shuyu Zhang, Sen Jia",
+    "authors": "Meng Xu, Hongtao Zhang, <strong>Wangquan He</strong>, Shuyu Zhang, Sen Jia<sup>&dagger;</sup>",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -149,8 +149,46 @@
     "thumbnail": "assets/publications/placeholder/DAHNet.png"
   },
   {
+    "title": "Local-Global Progressive Network for Hyperspectral and Multispectral Image Fusion",
+    "authors": "Shuyu Zhang, Yixun Cai, <strong>Wangquan He</strong>, Sen Jia<sup>&dagger;</sup>",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 8,
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "venueYear": "2026",
+    "venueNote": "(SCI Q1 TOP, IF=8.6)",
+    "year": "2026",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/document/11589378"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/LGPNet.png"
+  },
+  {
+    "title": "TMMSAM2: Tracker-Aided Multitemporal Memory SAM2 for Hyperspectral Object Tracking",
+    "authors": "Xiyou Fu, Ting Zhang, Xiaoyu Zhang, Mingying Lin, Zijun Lv, <strong>Wangquan He</strong>, Qi Ren, Meng Xu, Sen Jia<sup>&dagger;</sup>",
+    "type": "accepted",
+    "isFirstAuthor": false,
+    "showOnHomepage": true,
+    "featuredOrder": 9,
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "venueYear": "2026",
+    "venueNote": "(SCI Q1 TOP, IF=9.7)",
+    "year": "2026",
+    "tags": [
+      {
+        "text": "Paper",
+        "link": "https://ieeexplore.ieee.org/document/11597947/"
+      }
+    ],
+    "thumbnail": "assets/publications/placeholder/TMMSAM2.png"
+  },
+  {
     "title": "Region-Aware MoE Network for Hyperspectral and Multispectral Image Fusion",
-    "authors": "Nan Xiao, Xiyou Fu, Qi Ren, <strong>Wangquan He</strong>, Siqi Wei, Sen Jia",
+    "authors": "Nan Xiao, Xiyou Fu, Qi Ren, <strong>Wangquan He</strong>, Siqi Wei, Sen Jia<sup>&dagger;</sup>",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -173,7 +211,7 @@
   },
   {
     "title": "DiLAST: Leveraging Differential RGB Features for Hyperspectral Image Super-Resolution",
-    "authors": "Qi Ren, Meng Xu, Nanying Li, <strong>Wangquan He</strong>, Sen Jia",
+    "authors": "Qi Ren, Meng Xu, Nanying Li, <strong>Wangquan He</strong>, Sen Jia<sup>&dagger;</sup>",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -196,7 +234,7 @@
   },
   {
     "title": "Fuzzy Boundary-Aware Network for Hyperspectral Individual Tree Fine Recognition",
-    "authors": "Nanying Li, Shuguo Jiang, Yuxin Zhou, <strong>Wangquan He</strong>, Sen Jia",
+    "authors": "Nanying Li, Shuguo Jiang, Yuxin Zhou, <strong>Wangquan He</strong>, Sen Jia<sup>&dagger;</sup>",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -215,7 +253,7 @@
   },
   {
     "title": "Hyperspectral Image Classification Using a Superpixel-Pixel-Subpixel Multilevel Network",
-    "authors": "Bing Tu, Qi Ren, Qianming Li, <strong>Wangquan He</strong>, Wei He",
+    "authors": "Bing Tu, Qi Ren, Qianming Li, <strong>Wangquan He</strong>, Wei He<sup>&dagger;</sup>",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -248,11 +286,12 @@
         "text": "Paper",
         "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781394267880.ch14"
       }
-    ]
+    ],
+    "thumbnail": "assets/publications/placeholder/SSGHSIC.webp"
   },
   {
     "title": "Multiscale Adaptive Convolution for Hyperspectral Image Classification",
-    "authors": "Qi Ren, Bing Tu, Qianming Li, <strong>Wangquan He</strong>, Yishu Peng",
+    "authors": "Qi Ren, Bing Tu<sup>&dagger;</sup>, Qianming Li, <strong>Wangquan He</strong>, Yishu Peng",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -270,7 +309,7 @@
   },
   {
     "title": "Robust Learning of Mislabeled Training Samples for Remote Sensing Image Scene Classification",
-    "authors": "Bing Tu, Wenlan Kuang, <strong>Wangquan He</strong>, Guoyun Zhang, Yishu Peng",
+    "authors": "Bing Tu<sup>&dagger;</sup>, Wenlan Kuang, <strong>Wangquan He</strong>, Guoyun Zhang, Yishu Peng",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -288,7 +327,7 @@
   },
   {
     "title": "A Spectral-Spatial Attention Aggregation Network for Hyperspectral Imagery Classification",
-    "authors": "Wenlan Kuang, Bing Tu, <strong>Wangquan He</strong>, Guoyun Zhang, Yishu Peng",
+    "authors": "Wenlan Kuang, Bing Tu<sup>&dagger;</sup>, <strong>Wangquan He</strong>, Guoyun Zhang, Yishu Peng",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -305,7 +344,7 @@
   },
   {
     "title": "MCARNet: Mixed Convolution-Attention-Residual Network for Hyperspectral Image Classification of Cholangiocarcinoma",
-    "authors": "Jiaqi Xue, <strong>Wangquan He</strong>, Songxin Ye, Hong Liang, Sen Jia",
+    "authors": "Jiaqi Xue, <strong>Wangquan He</strong>, Songxin Ye, Hong Liang, Sen Jia<sup>&dagger;</sup>",
     "type": "accepted",
     "isFirstAuthor": false,
     "showOnHomepage": true,
@@ -318,6 +357,7 @@
         "text": "Paper",
         "link": "https://dl.acm.org/doi/abs/10.1145/3633637.3633688"
       }
-    ]
+    ],
+    "thumbnail": "assets/publications/placeholder/MCARNet.png"
   }
 ]

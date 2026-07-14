@@ -908,6 +908,7 @@ function getVenueShortName(venueStr, year) {
     if (s.includes('TNSE')) return 'IEEE TNSE' + revisionSuffix;
     if (s.includes('IOTJ') || s.includes('IoTJ')) return 'IEEE IoTJ' + revisionSuffix;
     if (s.includes('TGRS') || (s.includes('Geoscience') && s.includes('Remote Sensing'))) return 'IEEE TGRS' + revisionSuffix;
+    if (s.includes('TNNLS') || (s.includes('Neural Networks') && s.includes('Learning Systems'))) return 'IEEE TNNLS' + revisionSuffix;
     if (s.includes('Geodesy') && s.includes('Geoinformation')) return 'JGSIS' + revisionSuffix;
     if (s.includes('Geodaetica') || s.includes('测绘学报')) return '测绘学报' + revisionSuffix;
     if (s.includes('Instrumentation') && s.includes('Measurement')) return 'IEEE TIM' + revisionSuffix;
@@ -947,6 +948,7 @@ function getVenueFullName(venueStr) {
 
     if (s.toLowerCase().includes('arxiv')) return 'arXiv preprint';
     if (s.includes('TGRS')) return 'IEEE Transactions on Geoscience and Remote Sensing';
+    if (s.includes('TNNLS')) return 'IEEE Transactions on Neural Networks and Learning Systems';
     if (s.includes('Geodesy') && s.includes('Geoinformation')) return 'Journal of Geodesy and Geoinformation Science';
     if (s.includes('Geodaetica') || s.includes('测绘学报')) return '测绘学报 (Acta Geodaetica et Cartographica Sinica)';
     if (s.includes('Instrumentation') && s.includes('Measurement')) return 'IEEE Transactions on Instrumentation and Measurement';
